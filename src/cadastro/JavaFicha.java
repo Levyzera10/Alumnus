@@ -10,6 +10,7 @@ public class JavaFicha {
         float nota = 0;
         String nome = "";
         String cpf;
+        Sala novaSala = new Sala();
         Aluno novoAluno = new Aluno();
         Scanner teclado = new Scanner(System.in);
         do {
@@ -21,6 +22,8 @@ public class JavaFicha {
             System.out.println("5 Deletar usuário");
             opc = teclado.nextInt();
             teclado.nextLine();
+
+
             switch (opc) {
                 case 1:
                     System.out.println("\nNome:");
@@ -38,8 +41,12 @@ public class JavaFicha {
                         nota = teclado.nextFloat();
 
                     }
+
+                    novaSala.insereAluno(novoAluno);
                     break;
                 case 2:
+                    novaSala.listarAlunos();
+
                     break;
                 case 3:
                     break;

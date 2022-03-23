@@ -3,10 +3,12 @@ package cadastro;
 public class Aluno {
     String nome;
     String cpf;
-    public Aluno (){
+
+    public Aluno() {
 
     }
-    public Aluno(String nome , String cpf){
+
+    public Aluno(String nome, String cpf) {
         setNome(nome);
         setCpf(cpf);
     }
@@ -27,5 +29,9 @@ public class Aluno {
         this.cpf = cpf;
     }
 
+    void listar() {
+        System.out.println("\nNome:" + this.nome);
+        System.out.println("\nCpf" + this.cpf);
+    }
 
 }
