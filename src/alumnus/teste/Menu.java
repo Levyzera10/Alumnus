@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Menu {
     public static void main(String[] args) {
+        Aluno aluno = new Aluno();
 
         Scanner teclao = new Scanner(System.in);
 

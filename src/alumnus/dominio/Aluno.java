@@ -13,10 +13,10 @@ public class Aluno {
     }
 
     public void setNome(String nome) {
-        if((nome.length() < 6 ) || (nome.length() > 30 )){
+        if ((nome.length() < 6) || (nome.length() > 30))
             throw new IllegalArgumentException("Nome inválido . Mínimo 6 caracteres e máxido de 30 caracteres");
-        }
-        this.nome = nome;
+        else
+            this.nome = nome;
     }
 
     public String getCpf() {
@@ -24,7 +24,10 @@ public class Aluno {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        if ((cpf.length() < 11) || (cpf.length() > 11))
+            throw new IllegalArgumentException("CPF inválido");
+        else
+            this.cpf = cpf;
     }
 
     public String getDataDeNascimento() {
@@ -32,7 +35,10 @@ public class Aluno {
     }
 
     public void setDataDeNascimento(String dataDeNascimento) {
-        this.dataDeNascimento = dataDeNascimento;
+        if ((dataDeNascimento.length() < 8) || (cpf.length() > 8))
+            throw new IllegalArgumentException("CPF inválido");
+        else
+            this.dataDeNascimento = dataDeNascimento;
     }
 
     public String getMatricula() {
@@ -40,7 +46,10 @@ public class Aluno {
     }
 
     public void setMatricula(String matricula) {
-        this.matricula = matricula;
+        if ((matricula.length() < 12) || (matricula.length() > 12))
+            throw new IllegalArgumentException("Mátricula inválida");
+        else
+            this.matricula = matricula;
     }
 
     public String getIdioma() {
@@ -48,6 +57,8 @@ public class Aluno {
     }
 
     public void setIdioma(String idioma) {
+        if ((idioma != "Inglês") || (idioma != "Francês") || (idioma != "Latim"))
+            throw new IllegalArgumentException("Idioma inválido");
         this.idioma = idioma;
     }
 
@@ -56,7 +67,10 @@ public class Aluno {
     }
 
     public void setSexo(char sexo) {
-        this.sexo = sexo;
+        if ((sexo != 'M') || (sexo != 'F'))
+            throw new IllegalArgumentException("Sexo inválido");
+        else
+            this.sexo = sexo;
     }
 }
 
