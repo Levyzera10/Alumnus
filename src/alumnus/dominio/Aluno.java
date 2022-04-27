@@ -6,7 +6,7 @@ public class Aluno {
     private String dataDeNascimento;
     private String matricula;
     private String idioma;
-    private char sexo;
+
 
     public String getNome() {
         return nome;
@@ -62,16 +62,14 @@ public class Aluno {
         this.idioma = idioma;
     }
 
-    public char getSexo() {
-        return sexo;
+    public void listarDados(){
+        System.out.println("Nome : " + nome);
+        System.out.println("Cpf  : " + cpf);
+        System.out.println("Data de Nascimento : " + dataDeNascimento);
+        System.out.println("Idioma : " + idioma);
     }
 
-    public void setSexo(char sexo) {
-        if ((sexo != 'M') || (sexo != 'F'))
-            throw new IllegalArgumentException("Sexo inválido");
-        else
-            this.sexo = sexo;
-    }
 }
+
 
 
