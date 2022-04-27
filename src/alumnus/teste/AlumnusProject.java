@@ -4,7 +4,7 @@ import alumnus.dominio.Aluno;
 
 import java.util.Scanner;
 
-public class Menu {
+public class AlumnusProject {
     public static void main(String[] args) {
         String nome;
         String cpf;
