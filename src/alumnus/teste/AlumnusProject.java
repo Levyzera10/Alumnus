@@ -21,6 +21,28 @@ public class AlumnusProject {
                 case 1:
             }
         }
+
+        public static void login(){
+            String usuarioAdmin = "portalcoordenador";
+            String senhaAdmin = "Cordenador";
+
+            System.out.println("Digite usuário:");
+
+            Scanner scan = new Scanner(System.in);
+            String usuario = scan.nextLine();
+
+            System.out.println("Digite sua senha:");
+            String senha = scan.nextLine();
+
+            if(usuario.equals(usuarioAdmin)&& senha.equals(senhaAdmin)){
+                System.out.println("Usuário logado");
+                System.out.println("BEM VINDO");
+            }else {
+                System.out.println("Usuário não encontrado");
+                System.out.println("Tente novamente");
+            }
+
+        }
     }
 }
 
