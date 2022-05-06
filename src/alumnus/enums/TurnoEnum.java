@@ -10,13 +10,4 @@ public enum TurnoEnum {
     TurnoEnum(String turno) {
         this.turno = turno;
     }
-
-    public static TurnoEnum forValue(String turno) {
-        for (TurnoEnum value : TurnoEnum.values()) {
-            if (value.turno.equals(turno)) {
-                return value;
-            }
-        }
-        return null;
-    }
 }
